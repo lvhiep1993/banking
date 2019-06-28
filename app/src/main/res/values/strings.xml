@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">Banking</string>
+
+    <!--Common-->
+    <string name="loan_label">Loan</string>
+    <string name="done_label">Done</string>
+
+    <!--Loan detail-->
+    <string name="loan_detail">Loan Detail</string>
+    <string name="min_amount">Min Amount: %s</string>
+    <string name="max_amount">Max Amount: %s</string>
+    <string name="min_tenor">Min Tenor: %s</string>
+    <string name="max_tenor">Max Tenor: %s</string>
+    <string name="interest_rate">Interest Rate: %s</string>
+
+    <!--Loan create-->
+    <string name="loan_create">Create Loan</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="full_name">Full Name</string>
+    <string name="national_id_number">National Id Number</string>
+    <string name="province">Province</string>
+    <string name="monthly_income">Monthly Income</string>
+
+    <!--Error-->
+    <string name="phone_number_invalid">Phone Number is invalid!</string>
+    <string name="full_name_invalid">Full Name is invalid!</string>
+    <string name="national_id_number_invalid">National Id Number is invalid!</string>
+    <string name="province_invalid">Province is invalid!</string>
+    <string name="monthly_income_invalid">Monthly Income is invalid!</string>
+
+    <!--Success-->
+    <string name="create_loan_successful">Loan created!</string>
+</resources>

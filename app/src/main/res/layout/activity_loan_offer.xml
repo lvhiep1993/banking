@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.composer.loan.offer.LoanOfferActivity">
+
+    <data>
+
+        <variable
+            name="offer"
+            type="com.example.banking.data.model.Offer" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/btnLoan"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/dp24">
+
+                <ImageView
+                    android:id="@+id/ivBankLogo"
+                    android:layout_width="@dimen/dp200"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:scaleType="fitCenter" />
+
+                <TextView
+                    android:id="@+id/tvBankName"
+                    style="@style/App.TextAppearance.Header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp8"
+                    android:gravity="center_horizontal"
+                    android:text='@{offer.getBank() != null ?offer.getBank().getName():""}'
+                    tools:text="Vietcombank" />
+
+                <TextView
+                    android:id="@+id/tvMinAmount"
+                    style="@style/App.TextAppearance.Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp8"
+                    android:gravity="center_horizontal"
+                    android:text="@{String.format(@string/min_amount, offer.getMinAmount())}"
+                    tools:text="@string/min_amount" />
+
+                <TextView
+                    android:id="@+id/tvMaxAmount"
+                    style="@style/App.TextAppearance.Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp8"
+                    android:gravity="center_horizontal"
+                    android:text="@{String.format(@string/max_amount, offer.getMaxAmount())}"
+                    tools:text="@string/max_amount" />
+
+                <TextView
+                    android:id="@+id/tvMinTenor"
+                    style="@style/App.TextAppearance.Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp8"
+                    android:gravity="center_horizontal"
+                    android:text="@{String.format(@string/min_tenor, offer.getMinTenor())}"
+                    tools:text="@string/min_tenor" />
+
+                <TextView
+                    android:id="@+id/tvMaxTenor"
+                    style="@style/App.TextAppearance.Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp8"
+                    android:gravity="center_horizontal"
+                    android:text="@{String.format(@string/max_tenor, offer.getMaxTenor())}"
+                    tools:text="@string/max_tenor" />
+
+                <TextView
+                    android:id="@+id/tvInterestRate"
+                    style="@style/App.TextAppearance.Description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp8"
+                    android:gravity="center_horizontal"
+                    android:text="@{String.format(@string/interest_rate, offer.getInterestRate())}"
+                    tools:text="@string/interest_rate" />
+            </LinearLayout>
+        </ScrollView>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btnLoan"
+            style="@style/App.TextAppearance.Button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp16"
+            android:text="@string/loan_label"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+
+</layout>

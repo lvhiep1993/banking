@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="monthly_income">
+        <item name="1">Under 3 millions VND</item>
+        <item name="3000001">From 3 to 10 millions VND</item>
+        <item name="10000001">Over 10 millions VND</item>
+    </array>
+</resources>
